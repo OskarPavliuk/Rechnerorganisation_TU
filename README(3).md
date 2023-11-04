@@ -6,7 +6,7 @@
 
 [`TUB_cloud`](https://tubcloud.tu-berlin.de/s/YCGoWPgEYJQ6jY7)
 
-**<span style='color: red;'>Grundlegende Gatter</span>**
+**<code style='color: red;'>Grundlegende Gatter</code>**
 
 ![alt text](Bildschirmfoto%202023-11-04%20um%2011.58.47.png)
 
