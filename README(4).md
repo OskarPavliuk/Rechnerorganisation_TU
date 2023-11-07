@@ -83,7 +83,7 @@ Rechenregeln(2):
 
 ### **_Мінімізована Дизюнктивна нормальна форма_**
 
-![alt text](Bildschirmfoto 2023-11-07 um 08.42.13.png)
+![alt text](Bildschirmfoto%202023-11-07%20um%2008.42.13.png)
 
 Правила:
 
