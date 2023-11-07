@@ -118,3 +118,41 @@ bias = 127 (default)
 #### **_die Antwort:_**
 | 0 = s (1 Bit insgesamt) | 0111 1011 (8 Bit insgesamt) | 00110011001100110011001 (23 Bit insgesamt) |
 |-------------------------|-----------------------------|--------------------------------------------|
+***
+#### **_Addition von  Gleitkommazahlen_**
+
+Beispiel basiert auf 16-Bit **_Minifloat_** Format
+
+Z = X + Y mit
+- X = 2,35 (D) = 10.0101 1001 1001 1001 ... (B)
+- Y = 10,17 (D) = 1010.0010 1011 1000 0101 ... (B)
+
+Normalisieren und Anpassung an 16-Bit-Format:
+- X = 1.0010 1100 11 * 2^(1);
+- Y = 1.0100 0101 01 * 2^(3);
+
+```
+Ідемо наліво до першої одиниці
+- X = 10.0101 ... -> 1.00101 ... (nach links um eine Position)
+- Y = 1010.0010 ... -> 1.0100010 ... (nach links um vier Positionen)
+```
+
+– Vergleichen der beiden Exponenten e.
+
+– Bei Ungleichheit kleineren Exponent an den größeren anpassen
+
+– X = **0.0**100 1011 00 11 · 2^(3) - кінцевий результат(+ два нулі на початок)
+
+nächster Schritt:
+– Addieren der Mantissen:
+
+  0.0100 1011 00 (X) (+)
+
+  1.0100 0101 01 (Y) (+)
+
+  1.1001 0000 01 (Z) (=)
+  
+#### **_die Antwort: Z = 1.1001 0000 01 · 2^(3)_**
+
+Nach der Berechnungen = 12,500 975 656 2510 (korrekt wäre: 12,52).
+***
