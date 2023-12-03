@@ -188,3 +188,95 @@ d. 15
 **die Lösung: 14 Bits (1 bit Vorzeichen, 4 bits für bias, 9 bits für fraction) => bias = 2^(E(bits)-1)-1 = 2^(4-1)-1 = 2^(3) - 1 = 7.**
 
 ---
+
+### **6 Schaltungen**
+
+Welche dieser Schaltung(en) implementiert folgende (boolsche) Funktion?
+
+F = A¬C¬D + BC¬D + BD
+
+![alt text](pictures_2/Bildschirmfoto%202023-12-03%20um%2012.43.32.png)
+
+**die Lösung:**
+
+_**(Schaltung 1:)**_ ¬D(¬CA+CB) + D(¬DA+DB) = ¬D¬CA + ¬DCB + D¬DA + DDB = ¬D¬CA + ¬DCB + DB - **richtige Antwort**
+
+Schaltung 2: ¬D(¬BA+BC) + D(¬CA+CB) = ¬D¬BA + ¬DBC + D¬CA +DCB = ¬D¬BA + D¬CA + BC
+
+Schaltung 3: ¬C(¬DA+DB) + C(¬BA+BC) = ¬C¬DA + ¬CDB + C¬BA + CBC = ¬C¬DA + ¬CDB + C¬BA + BC
+
+---
+
+### **7 Gatter**
+
+In der Vorlesung wurden verschiedene Logikgatter vorgestellt. Welche Gatter können an Stelle des Fragezeichens eingesetzt werden?
+
+Eingänge (1,0,1), Ausgang 1
+
+**a. OR**
+
+b. NOR
+
+**c. NAND**
+
+d. AND
+
+e. MIPS
+
+**die Lösung:****
+
+1)1, 0, 1 für OR erhalten wir 1
+
+2)1, 0, 1 für NOR erhalten wir 0
+
+3)1, 0, 1 für NAND erhalten wir 1
+
+4)1, 0, 1 für AND ehalten wir 0
+
+
+---
+
+### **8 SR-Latch**
+
+Ein SR-Latch verfügt über zwei Eingangssignale S und R. Welche Aussage(n) über SR-Latches sind korrekt?
+
+a) Ein SR-Latch lässt sich aus zwei hintereinandergeschalteten D-Latches zusammensetzen.
+
+b) Bei einer positiven Taktflanke am Signal S wird der Wert am Eingang R an den Ausgang Q übernommen.
+
+c) Über den Eingang S kann der Ausgang Q auf 1 gesetzt werden, über den Eingang R kann der Ausgang Q auf 0 gesetzt werden.
+
+d) Ein SR-Latch lässt sich aus zwei kreuzgekoppelten NOR-Gattern zusammensetzen.
+
+**die richtige Antwort:**
+
+a) Diese Aussage ist nicht korrekt. Ein SR-Latch besteht normalerweise aus zwei NOR- oder NAND-Gattern, nicht aus D-Latches.
+
+b) Diese Aussage ist nicht korrekt. Bei einem SR-Latch wird der Zustand durch die Pegel an den Eingängen S (Set) und R (Reset) gesteuert, nicht durch Taktflanken.
+
+**c)** Diese Aussage ist korrekt. Über den Eingang S (Set) kann der Ausgang Q auf 1 gesetzt werden, über den Eingang R (Reset) kann der Ausgang Q auf 0 gesetzt werden.
+
+**d)** Diese Aussage ist korrekt. Ein SR-Latch kann aus zwei kreuzgekoppelten NOR-Gattern aufgebaut sein, wobei die Rückkopplung eine stabile Schaltung ermöglicht.
+
+---
+
+### **9 ALU**
+
+Welche Aussagen treffen auf die in der Vorlesung vorgestellte ALU zu?
+
+1. Die ALU verwendet für die Subtraktion einen Vollsubtrahierer.
+2. Die Subtraktion wird mit Hilfe des Zweierkomplementsystems durchgeführt.
+3. Die ALU kann sechs verschiedene Operationen ausführen (AND, OR, NAND, NOR, add, sub), daher ist das Operation-Steuersignal 3 bit breit.
+4. Eine 32 bit ALU besteht aus 32 1 bit ALUs.
+
+die richtige Antwort:
+
+a. Diese Aussage ist nicht korrekt. Eine ALU verwendet für die Subtraktion normalerweise das Zweierkomplementsystem und keinen Vollsubtrahierer.
+
+**b.** Diese Aussage ist korrekt. In modernen Prozessoren wird die Subtraktion in der ALU in der Regel mit Hilfe des Zweierkomplementsystems durchgeführt.
+
+**c.** Diese Aussage ist korrekt. Die ALU kann verschiedene Operationen wie AND, OR, NAND, NOR, Addition (add) und Subtraktion (sub) ausführen. Daher ist das Op-Steuersignal 3 Bit breit, um diese verschiedenen Operationen zu steuern.
+
+d. Diese Aussage ist nicht korrekt. Eine 32-Bit-ALU besteht nicht zwangsläufig aus 32 einzelnen 1-Bit-ALUs. In der Regel besteht eine 32-Bit-ALU aus einer Kombination von Logikgattern, Flip-Flops und anderen Schaltungselementen, um die gewünschten Operationen auf 32-Bit-Daten durchzuführen.
+
+---
