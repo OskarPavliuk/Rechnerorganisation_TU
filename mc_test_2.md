@@ -195,7 +195,7 @@ Welche dieser Schaltung(en) implementiert folgende (boolsche) Funktion?
 
 F = A¬C¬D + BC¬D + BD
 
-![alt text](pictures_2/Bildschirmfoto%202023-12-03%20um%2012.43.32.png)
+![alt text](Bildschirmfoto%202023-12-03%20um%2012.43.32.png)
 
 **die Lösung:**
 
